@@ -1,0 +1,195 @@
+# ===========================================================================
+# Multilingual file for the TOS 7 Docker application "cyberchefdocker".
+# File name MUST be: <appid>.lang.  23-language superset (14 required by TOS).
+# The App Center picks the text matching the user's device language;
+# untranslated nodes fall back to English, which the official guide allows.
+# Fields: name (app title), auth (upstream author), descript (up to 512
+# chars), release_note, important (up to 512 chars).
+# Translations come from tosapp.json "translations"; run
+#   tosdocker lang <app>          to re-render this file
+#   tosdocker translate <app>     to see what still needs translating
+# ===========================================================================
+[en-us]
+name         = "CyberChef"
+auth         = "gchq"
+version      = "@@VERSION@@"
+descript     = "CyberChef is a web-based 'cyber swiss army knife': encode, decode, encrypt, hash, parse and transform data with more than 400 operations that you drag into a recipe. Handy for base64, JWT, hex, gzip, timestamps and log parsing without uploading anything to a third-party site - everything runs in your browser, served from your own NAS."
+release_note = "1. First release: CyberChef 10.19.4 from Docker Hub as a non-root container. 400+ data operations with recipes, all executed in the browser; no server-side storage."
+important    = "Requires DockerEngine (installed automatically if missing). Everything runs locally in the browser: recipes and input are not sent to any server, and the container stores no documents. The UI is plain HTTP; use a TLS reverse proxy if you want to reach it from outside your LAN. It is a client-side tool, so there is nothing to back up beyond your saved recipes in the browser."
+
+[zh-cn]
+name         = "CyberChef"
+auth         = "gchq"
+version      = "@@VERSION@@"
+descript     = "CyberChef 是网页版的「数据处理瑞士军刀」：把 400 多个操作拖成配方，就能做编码/解码、加解密、哈希、解析与格式转换。处理 base64、JWT、十六进制、gzip、时间戳、日志都很方便，而且完全不用上传到第三方站点——一切都在浏览器里、由你自己的 NAS 提供页面。"
+release_note = "1. 首个版本：基于 Docker Hub 的 CyberChef 10.19.4，以非 root 容器运行。400+ 数据处理操作与配方，全部在浏览器内执行，服务端不存储任何内容。"
+important    = "需要 DockerEngine（缺失时应用中心会自动安装）。所有运算都在浏览器本地完成：配方与输入不会发到服务器，容器也不保存任何文档。界面为纯 HTTP，若要从外网访问请配置带 TLS 的反向代理。它是纯前端工具，除了浏览器里保存的配方之外没有需要备份的数据。"
+
+[zh-hk]
+name         = "CyberChef"
+auth         = "gchq"
+version      = "@@VERSION@@"
+descript     = "CyberChef 是網頁版的「資料處理瑞士軍刀」：把 400 多個操作拖成配方，就能做編碼/解碼、加解密、雜湊、解析與格式轉換。處理 base64、JWT、十六進位、gzip、時間戳、日誌都很方便，而且完全不用上傳到第三方站點——一切都在瀏覽器裡、由你自己的 NAS 提供頁面。"
+release_note = "1. 首個版本：基於 Docker Hub 的 CyberChef 10.19.4，以非 root 容器運行。400+ 資料處理操作與配方，全部在瀏覽器內執行，伺服器端不儲存任何內容。"
+important    = "需要 DockerEngine（缺少時應用中心會自動安裝）。所有運算都在瀏覽器本地完成：配方與輸入不會發到伺服器，容器也不保存任何文件。介面為純 HTTP，若要從外網存取請配置帶 TLS 的反向代理。它是純前端工具，除了瀏覽器裡保存的配方之外沒有需要備份的資料。"
+
+[fr-fr]
+name         = "CyberChef"
+auth         = "gchq"
+version      = "@@VERSION@@"
+descript     = "CyberChef is a web-based 'cyber swiss army knife': encode, decode, encrypt, hash, parse and transform data with more than 400 operations that you drag into a recipe. Handy for base64, JWT, hex, gzip, timestamps and log parsing without uploading anything to a third-party site - everything runs in your browser, served from your own NAS."
+release_note = "1. First release: CyberChef 10.19.4 from Docker Hub as a non-root container. 400+ data operations with recipes, all executed in the browser; no server-side storage."
+important    = "Requires DockerEngine (installed automatically if missing). Everything runs locally in the browser: recipes and input are not sent to any server, and the container stores no documents. The UI is plain HTTP; use a TLS reverse proxy if you want to reach it from outside your LAN. It is a client-side tool, so there is nothing to back up beyond your saved recipes in the browser."
+
+[de-de]
+name         = "CyberChef"
+auth         = "gchq"
+version      = "@@VERSION@@"
+descript     = "CyberChef is a web-based 'cyber swiss army knife': encode, decode, encrypt, hash, parse and transform data with more than 400 operations that you drag into a recipe. Handy for base64, JWT, hex, gzip, timestamps and log parsing without uploading anything to a third-party site - everything runs in your browser, served from your own NAS."
+release_note = "1. First release: CyberChef 10.19.4 from Docker Hub as a non-root container. 400+ data operations with recipes, all executed in the browser; no server-side storage."
+important    = "Requires DockerEngine (installed automatically if missing). Everything runs locally in the browser: recipes and input are not sent to any server, and the container stores no documents. The UI is plain HTTP; use a TLS reverse proxy if you want to reach it from outside your LAN. It is a client-side tool, so there is nothing to back up beyond your saved recipes in the browser."
+
+[it-it]
+name         = "CyberChef"
+auth         = "gchq"
+version      = "@@VERSION@@"
+descript     = "CyberChef is a web-based 'cyber swiss army knife': encode, decode, encrypt, hash, parse and transform data with more than 400 operations that you drag into a recipe. Handy for base64, JWT, hex, gzip, timestamps and log parsing without uploading anything to a third-party site - everything runs in your browser, served from your own NAS."
+release_note = "1. First release: CyberChef 10.19.4 from Docker Hub as a non-root container. 400+ data operations with recipes, all executed in the browser; no server-side storage."
+important    = "Requires DockerEngine (installed automatically if missing). Everything runs locally in the browser: recipes and input are not sent to any server, and the container stores no documents. The UI is plain HTTP; use a TLS reverse proxy if you want to reach it from outside your LAN. It is a client-side tool, so there is nothing to back up beyond your saved recipes in the browser."
+
+[es-es]
+name         = "CyberChef"
+auth         = "gchq"
+version      = "@@VERSION@@"
+descript     = "CyberChef is a web-based 'cyber swiss army knife': encode, decode, encrypt, hash, parse and transform data with more than 400 operations that you drag into a recipe. Handy for base64, JWT, hex, gzip, timestamps and log parsing without uploading anything to a third-party site - everything runs in your browser, served from your own NAS."
+release_note = "1. First release: CyberChef 10.19.4 from Docker Hub as a non-root container. 400+ data operations with recipes, all executed in the browser; no server-side storage."
+important    = "Requires DockerEngine (installed automatically if missing). Everything runs locally in the browser: recipes and input are not sent to any server, and the container stores no documents. The UI is plain HTTP; use a TLS reverse proxy if you want to reach it from outside your LAN. It is a client-side tool, so there is nothing to back up beyond your saved recipes in the browser."
+
+[hu-hu]
+name         = "CyberChef"
+auth         = "gchq"
+version      = "@@VERSION@@"
+descript     = "CyberChef is a web-based 'cyber swiss army knife': encode, decode, encrypt, hash, parse and transform data with more than 400 operations that you drag into a recipe. Handy for base64, JWT, hex, gzip, timestamps and log parsing without uploading anything to a third-party site - everything runs in your browser, served from your own NAS."
+release_note = "1. First release: CyberChef 10.19.4 from Docker Hub as a non-root container. 400+ data operations with recipes, all executed in the browser; no server-side storage."
+important    = "Requires DockerEngine (installed automatically if missing). Everything runs locally in the browser: recipes and input are not sent to any server, and the container stores no documents. The UI is plain HTTP; use a TLS reverse proxy if you want to reach it from outside your LAN. It is a client-side tool, so there is nothing to back up beyond your saved recipes in the browser."
+
+[ja-jp]
+name         = "CyberChef"
+auth         = "gchq"
+version      = "@@VERSION@@"
+descript     = "CyberChef is a web-based 'cyber swiss army knife': encode, decode, encrypt, hash, parse and transform data with more than 400 operations that you drag into a recipe. Handy for base64, JWT, hex, gzip, timestamps and log parsing without uploading anything to a third-party site - everything runs in your browser, served from your own NAS."
+release_note = "1. First release: CyberChef 10.19.4 from Docker Hub as a non-root container. 400+ data operations with recipes, all executed in the browser; no server-side storage."
+important    = "Requires DockerEngine (installed automatically if missing). Everything runs locally in the browser: recipes and input are not sent to any server, and the container stores no documents. The UI is plain HTTP; use a TLS reverse proxy if you want to reach it from outside your LAN. It is a client-side tool, so there is nothing to back up beyond your saved recipes in the browser."
+
+[ko-kr]
+name         = "CyberChef"
+auth         = "gchq"
+version      = "@@VERSION@@"
+descript     = "CyberChef is a web-based 'cyber swiss army knife': encode, decode, encrypt, hash, parse and transform data with more than 400 operations that you drag into a recipe. Handy for base64, JWT, hex, gzip, timestamps and log parsing without uploading anything to a third-party site - everything runs in your browser, served from your own NAS."
+release_note = "1. First release: CyberChef 10.19.4 from Docker Hub as a non-root container. 400+ data operations with recipes, all executed in the browser; no server-side storage."
+important    = "Requires DockerEngine (installed automatically if missing). Everything runs locally in the browser: recipes and input are not sent to any server, and the container stores no documents. The UI is plain HTTP; use a TLS reverse proxy if you want to reach it from outside your LAN. It is a client-side tool, so there is nothing to back up beyond your saved recipes in the browser."
+
+[pl-pl]
+name         = "CyberChef"
+auth         = "gchq"
+version      = "@@VERSION@@"
+descript     = "CyberChef is a web-based 'cyber swiss army knife': encode, decode, encrypt, hash, parse and transform data with more than 400 operations that you drag into a recipe. Handy for base64, JWT, hex, gzip, timestamps and log parsing without uploading anything to a third-party site - everything runs in your browser, served from your own NAS."
+release_note = "1. First release: CyberChef 10.19.4 from Docker Hub as a non-root container. 400+ data operations with recipes, all executed in the browser; no server-side storage."
+important    = "Requires DockerEngine (installed automatically if missing). Everything runs locally in the browser: recipes and input are not sent to any server, and the container stores no documents. The UI is plain HTTP; use a TLS reverse proxy if you want to reach it from outside your LAN. It is a client-side tool, so there is nothing to back up beyond your saved recipes in the browser."
+
+[ru-ru]
+name         = "CyberChef"
+auth         = "gchq"
+version      = "@@VERSION@@"
+descript     = "CyberChef is a web-based 'cyber swiss army knife': encode, decode, encrypt, hash, parse and transform data with more than 400 operations that you drag into a recipe. Handy for base64, JWT, hex, gzip, timestamps and log parsing without uploading anything to a third-party site - everything runs in your browser, served from your own NAS."
+release_note = "1. First release: CyberChef 10.19.4 from Docker Hub as a non-root container. 400+ data operations with recipes, all executed in the browser; no server-side storage."
+important    = "Requires DockerEngine (installed automatically if missing). Everything runs locally in the browser: recipes and input are not sent to any server, and the container stores no documents. The UI is plain HTTP; use a TLS reverse proxy if you want to reach it from outside your LAN. It is a client-side tool, so there is nothing to back up beyond your saved recipes in the browser."
+
+[tr-tr]
+name         = "CyberChef"
+auth         = "gchq"
+version      = "@@VERSION@@"
+descript     = "CyberChef is a web-based 'cyber swiss army knife': encode, decode, encrypt, hash, parse and transform data with more than 400 operations that you drag into a recipe. Handy for base64, JWT, hex, gzip, timestamps and log parsing without uploading anything to a third-party site - everything runs in your browser, served from your own NAS."
+release_note = "1. First release: CyberChef 10.19.4 from Docker Hub as a non-root container. 400+ data operations with recipes, all executed in the browser; no server-side storage."
+important    = "Requires DockerEngine (installed automatically if missing). Everything runs locally in the browser: recipes and input are not sent to any server, and the container stores no documents. The UI is plain HTTP; use a TLS reverse proxy if you want to reach it from outside your LAN. It is a client-side tool, so there is nothing to back up beyond your saved recipes in the browser."
+
+[pt-pt]
+name         = "CyberChef"
+auth         = "gchq"
+version      = "@@VERSION@@"
+descript     = "CyberChef is a web-based 'cyber swiss army knife': encode, decode, encrypt, hash, parse and transform data with more than 400 operations that you drag into a recipe. Handy for base64, JWT, hex, gzip, timestamps and log parsing without uploading anything to a third-party site - everything runs in your browser, served from your own NAS."
+release_note = "1. First release: CyberChef 10.19.4 from Docker Hub as a non-root container. 400+ data operations with recipes, all executed in the browser; no server-side storage."
+important    = "Requires DockerEngine (installed automatically if missing). Everything runs locally in the browser: recipes and input are not sent to any server, and the container stores no documents. The UI is plain HTTP; use a TLS reverse proxy if you want to reach it from outside your LAN. It is a client-side tool, so there is nothing to back up beyond your saved recipes in the browser."
+
+[ar-sa]
+name         = "CyberChef"
+auth         = "gchq"
+version      = "@@VERSION@@"
+descript     = "CyberChef is a web-based 'cyber swiss army knife': encode, decode, encrypt, hash, parse and transform data with more than 400 operations that you drag into a recipe. Handy for base64, JWT, hex, gzip, timestamps and log parsing without uploading anything to a third-party site - everything runs in your browser, served from your own NAS."
+release_note = "1. First release: CyberChef 10.19.4 from Docker Hub as a non-root container. 400+ data operations with recipes, all executed in the browser; no server-side storage."
+important    = "Requires DockerEngine (installed automatically if missing). Everything runs locally in the browser: recipes and input are not sent to any server, and the container stores no documents. The UI is plain HTTP; use a TLS reverse proxy if you want to reach it from outside your LAN. It is a client-side tool, so there is nothing to back up beyond your saved recipes in the browser."
+
+[cs-cz]
+name         = "CyberChef"
+auth         = "gchq"
+version      = "@@VERSION@@"
+descript     = "CyberChef is a web-based 'cyber swiss army knife': encode, decode, encrypt, hash, parse and transform data with more than 400 operations that you drag into a recipe. Handy for base64, JWT, hex, gzip, timestamps and log parsing without uploading anything to a third-party site - everything runs in your browser, served from your own NAS."
+release_note = "1. First release: CyberChef 10.19.4 from Docker Hub as a non-root container. 400+ data operations with recipes, all executed in the browser; no server-side storage."
+important    = "Requires DockerEngine (installed automatically if missing). Everything runs locally in the browser: recipes and input are not sent to any server, and the container stores no documents. The UI is plain HTTP; use a TLS reverse proxy if you want to reach it from outside your LAN. It is a client-side tool, so there is nothing to back up beyond your saved recipes in the browser."
+
+[he-il]
+name         = "CyberChef"
+auth         = "gchq"
+version      = "@@VERSION@@"
+descript     = "CyberChef is a web-based 'cyber swiss army knife': encode, decode, encrypt, hash, parse and transform data with more than 400 operations that you drag into a recipe. Handy for base64, JWT, hex, gzip, timestamps and log parsing without uploading anything to a third-party site - everything runs in your browser, served from your own NAS."
+release_note = "1. First release: CyberChef 10.19.4 from Docker Hub as a non-root container. 400+ data operations with recipes, all executed in the browser; no server-side storage."
+important    = "Requires DockerEngine (installed automatically if missing). Everything runs locally in the browser: recipes and input are not sent to any server, and the container stores no documents. The UI is plain HTTP; use a TLS reverse proxy if you want to reach it from outside your LAN. It is a client-side tool, so there is nothing to back up beyond your saved recipes in the browser."
+
+[id-id]
+name         = "CyberChef"
+auth         = "gchq"
+version      = "@@VERSION@@"
+descript     = "CyberChef is a web-based 'cyber swiss army knife': encode, decode, encrypt, hash, parse and transform data with more than 400 operations that you drag into a recipe. Handy for base64, JWT, hex, gzip, timestamps and log parsing without uploading anything to a third-party site - everything runs in your browser, served from your own NAS."
+release_note = "1. First release: CyberChef 10.19.4 from Docker Hub as a non-root container. 400+ data operations with recipes, all executed in the browser; no server-side storage."
+important    = "Requires DockerEngine (installed automatically if missing). Everything runs locally in the browser: recipes and input are not sent to any server, and the container stores no documents. The UI is plain HTTP; use a TLS reverse proxy if you want to reach it from outside your LAN. It is a client-side tool, so there is nothing to back up beyond your saved recipes in the browser."
+
+[nb-no]
+name         = "CyberChef"
+auth         = "gchq"
+version      = "@@VERSION@@"
+descript     = "CyberChef is a web-based 'cyber swiss army knife': encode, decode, encrypt, hash, parse and transform data with more than 400 operations that you drag into a recipe. Handy for base64, JWT, hex, gzip, timestamps and log parsing without uploading anything to a third-party site - everything runs in your browser, served from your own NAS."
+release_note = "1. First release: CyberChef 10.19.4 from Docker Hub as a non-root container. 400+ data operations with recipes, all executed in the browser; no server-side storage."
+important    = "Requires DockerEngine (installed automatically if missing). Everything runs locally in the browser: recipes and input are not sent to any server, and the container stores no documents. The UI is plain HTTP; use a TLS reverse proxy if you want to reach it from outside your LAN. It is a client-side tool, so there is nothing to back up beyond your saved recipes in the browser."
+
+[nl-nl]
+name         = "CyberChef"
+auth         = "gchq"
+version      = "@@VERSION@@"
+descript     = "CyberChef is a web-based 'cyber swiss army knife': encode, decode, encrypt, hash, parse and transform data with more than 400 operations that you drag into a recipe. Handy for base64, JWT, hex, gzip, timestamps and log parsing without uploading anything to a third-party site - everything runs in your browser, served from your own NAS."
+release_note = "1. First release: CyberChef 10.19.4 from Docker Hub as a non-root container. 400+ data operations with recipes, all executed in the browser; no server-side storage."
+important    = "Requires DockerEngine (installed automatically if missing). Everything runs locally in the browser: recipes and input are not sent to any server, and the container stores no documents. The UI is plain HTTP; use a TLS reverse proxy if you want to reach it from outside your LAN. It is a client-side tool, so there is nothing to back up beyond your saved recipes in the browser."
+
+[sv-se]
+name         = "CyberChef"
+auth         = "gchq"
+version      = "@@VERSION@@"
+descript     = "CyberChef is a web-based 'cyber swiss army knife': encode, decode, encrypt, hash, parse and transform data with more than 400 operations that you drag into a recipe. Handy for base64, JWT, hex, gzip, timestamps and log parsing without uploading anything to a third-party site - everything runs in your browser, served from your own NAS."
+release_note = "1. First release: CyberChef 10.19.4 from Docker Hub as a non-root container. 400+ data operations with recipes, all executed in the browser; no server-side storage."
+important    = "Requires DockerEngine (installed automatically if missing). Everything runs locally in the browser: recipes and input are not sent to any server, and the container stores no documents. The UI is plain HTTP; use a TLS reverse proxy if you want to reach it from outside your LAN. It is a client-side tool, so there is nothing to back up beyond your saved recipes in the browser."
+
+[th-th]
+name         = "CyberChef"
+auth         = "gchq"
+version      = "@@VERSION@@"
+descript     = "CyberChef is a web-based 'cyber swiss army knife': encode, decode, encrypt, hash, parse and transform data with more than 400 operations that you drag into a recipe. Handy for base64, JWT, hex, gzip, timestamps and log parsing without uploading anything to a third-party site - everything runs in your browser, served from your own NAS."
+release_note = "1. First release: CyberChef 10.19.4 from Docker Hub as a non-root container. 400+ data operations with recipes, all executed in the browser; no server-side storage."
+important    = "Requires DockerEngine (installed automatically if missing). Everything runs locally in the browser: recipes and input are not sent to any server, and the container stores no documents. The UI is plain HTTP; use a TLS reverse proxy if you want to reach it from outside your LAN. It is a client-side tool, so there is nothing to back up beyond your saved recipes in the browser."
+
+[vi-vn]
+name         = "CyberChef"
+auth         = "gchq"
+version      = "@@VERSION@@"
+descript     = "CyberChef is a web-based 'cyber swiss army knife': encode, decode, encrypt, hash, parse and transform data with more than 400 operations that you drag into a recipe. Handy for base64, JWT, hex, gzip, timestamps and log parsing without uploading anything to a third-party site - everything runs in your browser, served from your own NAS."
+release_note = "1. First release: CyberChef 10.19.4 from Docker Hub as a non-root container. 400+ data operations with recipes, all executed in the browser; no server-side storage."
+important    = "Requires DockerEngine (installed automatically if missing). Everything runs locally in the browser: recipes and input are not sent to any server, and the container stores no documents. The UI is plain HTTP; use a TLS reverse proxy if you want to reach it from outside your LAN. It is a client-side tool, so there is nothing to back up beyond your saved recipes in the browser."
+

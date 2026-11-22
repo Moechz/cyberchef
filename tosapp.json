@@ -1,7 +1,7 @@
 {
   "app_id": "cyberchefdocker",
   "title": "CyberChef",
-  "image": "mpepping/cyberchef:v10.19.4",
+  "image": "mpepping/cyberchef:v11.6.0",
   "repo_name": "cyberchef",
   "mode": "plain",
   "container_port": 8000,
@@ -20,53 +20,9 @@
   "auth": "gchq",
   "upstream_url": "https://github.com/gchq/CyberChef",
   "upstream_license": "Apache-2.0",
-  "descript": "CyberChef is a web-based \"cyber swiss army knife\": encode, decode, encrypt, hash, parse and transform data with more than 400 operations that you drag into a recipe. Handy for base64, JWT, hex, gzip, timestamps and log parsing without uploading anything to a third-party site - everything runs in your browser, served from your own NAS.",
-  "release_note": "1. First release: CyberChef 10.19.4 from Docker Hub as a non-root container. 400+ data operations with recipes, all executed in the browser; no server-side storage.",
-  "important": "Requires DockerEngine (installed automatically if missing). Everything runs locally in the browser: recipes and input are not sent to any server, and the container stores no documents. The UI is plain HTTP; use a TLS reverse proxy if you want to reach it from outside your LAN. It is a client-side tool, so there is nothing to back up beyond your saved recipes in the browser.",
-  "probe": {
-    "user_in_image": "101",
-    "entrypoint": [
-      "/docker-entrypoint.sh"
-    ],
-    "cmd": [
-      "nginx",
-      "-g",
-      "daemon off;"
-    ],
-    "exposed_ports": [
-      8000,
-      8080
-    ],
-    "declared_volumes": [],
-    "image_healthcheck": [
-      "CMD-SHELL",
-      "curl -sf -o /dev/null http://localhost:8000 || exit 1"
-    ],
-    "digest": "mpepping/cyberchef@sha256:91e04eaaa1ba1eac6b8e410d6f7b340e1ea0450d48ccbb52ec67ce6faa3672c5",
-    "architecture": "x86_64",
-    "platforms": [
-      "x86_64",
-      "aarch64"
-    ],
-    "http_client_in_image": "curl",
-    "trial_run": {
-      "ok": true,
-      "http_code": "200",
-      "state": "running",
-      "paths": [],
-      "host_port": 18000,
-      "log_tail": "ooking for shell scripts in /docker-entrypoint.d/\n/docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh\n10-listen-on-ipv6-by-default.sh: info: can not modify /etc/nginx/conf.d/default.conf (read-only file system?)\n/docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh\n/docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh\n/docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh\n/docker-entrypoint.sh: Configuration complete; ready for start up\n172.17.0.1 - - [13/Nov/2026:19:47:10 +0000] \"GET / HTTP/1.1\" 200 77361 \"-\" \"curl/7.81.0\" \"-\"\n2026/11/13 19:47:08 [notice] 1#1: using the \"epoll\" event method\n2026/11/13 19:47:08 [notice] 1#1: nginx/1.27.2\n2026/11/13 19:47:08 [notice] 1#1: built by gcc 13.2.1 20240309 (Alpine 13.2.1_git20240309) \n2026/11/13 19:47:08 [notice] 1#1: OS: Linux 6.12.63+\n2026/11/13 19:47:08 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576\n2026/11/13 19:47:08 [notice] 1#1: start worker processes\n2026/11/13 19:47:08 [notice] 1#1: start worker process 20\n2026/11/13 19:47:08 [notice] 1#1: start worker process 21\n2026/11/13 19:47:08 [notice] 1#1: start worker process 22\n2026/11/13 19:47:08 [notice] 1#1: start worker process 23\n2026/11/13 19:47:08 [notice] 1#1: start worker process 24\n2026/11/13 19:47:08 [notice] 1#1: start worker process 25\n2026/11/13 19:47:08 [notice] 1#1: start worker process 26\n2026/11/13 19:47:08 [notice] 1#1: start worker process 27",
-      "files_in_mounts": ""
-    },
-    "docker_hub": {},
-    "github": {
-      "owner": "nginx",
-      "repo": "docker-nginx-unprivileged",
-      "description": "Unprivileged NGINX Dockerfiles",
-      "license": "Apache-2.0",
-      "homepage": "https://hub.docker.com/r/nginxinc/nginx-unprivileged"
-    }
-  },
+  "descript": "CyberChef is a web-based \"cyber swiss army knife\": encode, decode, encrypt, hash, parse and transform data with more than 400 operations that you drag into a recipe. Handy for base64, JWT, hex, gzip, timestamps and log parsing. Recipes and data are processed in your own browser - the NAS only serves the static page and the developer receives nothing.",
+  "release_note": "11.6.0-1: remediation of the listing review (C3/C4/C5/C6/C7/T1). Upgraded to upstream CyberChef 11.6.0 - current nginx base image and current bundled JS dependencies, which addresses the scanned CVEs; added a complete privacy policy linked from Help; the description now discloses the three opt-in network operations; licence metadata corrected; README expanded.",
+  "important": "Requires DockerEngine (auto-installed if missing). Everything runs in your browser: input and recipes never reach the container or the developer. Only three optional operations use the internet: HTTP request (the URL you type), DNS over HTTPS (Google or Cloudflare) and Show on map (unpkg.com + OpenStreetMap tiles). The UI is plain HTTP; use a TLS reverse proxy for remote access. No user content is stored on the NAS.",
   "healthcheck": [
     "CMD-SHELL",
     "curl -s -o /dev/null http://127.0.0.1:8000/ || exit 1"
@@ -76,34 +32,37 @@
   "publisher": "Moechz",
   "compose_project": "cyberchefdocker",
   "github_repo": "cyberchef",
-  "upstream_version": "10.19.4",
+  "upstream_version": "11.6.0",
   "release_tag_prefix": "v",
-  "version": "10.19.4-1",
-  "help": "https://github.com/Moechz/cyberchef/issues",
+  "version": "11.6.0-1",
+  "help": "https://github.com/Moechz/cyberchef/blob/main/PRIVACY.md",
   "official": "https://github.com/gchq/CyberChef",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "docker_socket": false,
   "group_add": [],
   "healthcheck_start_period": "30s",
   "translations": {
     "zh-cn": {
-      "descript": "CyberChef 是网页版的「数据处理瑞士军刀」：把 400 多个操作拖成配方，就能做编码/解码、加解密、哈希、解析与格式转换。处理 base64、JWT、十六进制、gzip、时间戳、日志都很方便，而且完全不用上传到第三方站点——一切都在浏览器里、由你自己的 NAS 提供页面。",
-      "important": "需要 DockerEngine（缺失时应用中心会自动安装）。所有运算都在浏览器本地完成：配方与输入不会发到服务器，容器也不保存任何文档。界面为纯 HTTP，若要从外网访问请配置带 TLS 的反向代理。它是纯前端工具，除了浏览器里保存的配方之外没有需要备份的数据。",
-      "release_note": "1. 首个版本：基于 Docker Hub 的 CyberChef 10.19.4，以非 root 容器运行。400+ 数据处理操作与配方，全部在浏览器内执行，服务端不存储任何内容。"
+      "descript": "CyberChef 是网页版的「数据处理瑞士军刀」：把 400 多个操作拖成配方，就能做编码/解码、加解密、哈希、解析与格式转换。处理 base64、JWT、十六进制、gzip、时间戳、日志都很方便。配方与数据都在你自己的浏览器里处理——NAS 只负责发送静态页面，开发者不会收到任何数据。",
+      "important": "需要 DockerEngine（缺失时应用中心会自动安装）。所有运算都在浏览器本地完成：输入与配方不会发到容器，也不会发给开发者。只有三个可选操作在使用时会访问外网：HTTP request（你填写的网址）、DNS over HTTPS（Google 或 Cloudflare）、Show on map（unpkg.com + OpenStreetMap 瓦片），除此之外不发起任何请求。界面为纯 HTTP，若要从外网访问请配置带 TLS 的反向代理。NAS 上不保存任何用户内容，因此没有需要备份的数据。",
+      "release_note": "11.6.0-1：针对上轮审核意见的整改（C3/C4/C5/C6/C7/T1）。升级到上游 CyberChef 11.6.0——新的 nginx 基础镜像与当前版本的 JS 依赖，修复扫描报告中的 CVE；新增完整隐私政策并由「帮助」链接；描述中如实说明三个可选的外网操作；修正许可证信息；补全 README。"
     },
     "zh-hk": {
-      "descript": "CyberChef 是網頁版的「資料處理瑞士軍刀」：把 400 多個操作拖成配方，就能做編碼/解碼、加解密、雜湊、解析與格式轉換。處理 base64、JWT、十六進位、gzip、時間戳、日誌都很方便，而且完全不用上傳到第三方站點——一切都在瀏覽器裡、由你自己的 NAS 提供頁面。",
-      "important": "需要 DockerEngine（缺少時應用中心會自動安裝）。所有運算都在瀏覽器本地完成：配方與輸入不會發到伺服器，容器也不保存任何文件。介面為純 HTTP，若要從外網存取請配置帶 TLS 的反向代理。它是純前端工具，除了瀏覽器裡保存的配方之外沒有需要備份的資料。",
-      "release_note": "1. 首個版本：基於 Docker Hub 的 CyberChef 10.19.4，以非 root 容器運行。400+ 資料處理操作與配方，全部在瀏覽器內執行，伺服器端不儲存任何內容。"
+      "descript": "CyberChef 是網頁版的「資料處理瑞士軍刀」：把 400 多個操作拖成配方，就能做編碼/解碼、加解密、雜湊、解析與格式轉換。處理 base64、JWT、十六進位、gzip、時間戳、日誌都很方便。配方與資料都在你自己的瀏覽器裡處理——NAS 只負責傳送靜態頁面，開發者不會收到任何資料。",
+      "important": "需要 DockerEngine（缺少時應用中心會自動安裝）。所有運算都在瀏覽器本地完成：輸入與配方不會傳到容器，也不會傳給開發者。只有三個可選操作在使用時會連上外網：HTTP request（你填寫的網址）、DNS over HTTPS（Google 或 Cloudflare）、Show on map（unpkg.com + OpenStreetMap 圖磚），除此之外不發出任何請求。介面為純 HTTP，若要從外網存取請配置帶 TLS 的反向代理。NAS 上不儲存任何使用者內容，因此沒有需要備份的資料。",
+      "release_note": "11.6.0-1：針對上輪審核意見的整改（C3/C4/C5/C6/C7/T1）。升級到上游 CyberChef 11.6.0——新的 nginx 基礎映像與現行版本的 JS 相依套件，修復掃描報告中的 CVE；新增完整隱私政策並由「說明」連結；描述中如實說明三個可選的外網操作；修正授權資訊；補齊 README。"
     }
   },
-  "data_notes": "CyberChef is a static browser application: the `/data` mount is reserved for optional runtime files and the server keeps no documents; recipes are stored in your browser.",
+  "data_notes": "CyberChef is a static browser application: every operation runs in the browser tab, the container only serves files and keeps no documents. /data is an empty placeholder so the app has its own TOS data directory; recipes live in your browser's localStorage.",
   "design_notes": [
-    "**Client-side only.** Every operation runs in the browser - no data leaves the NAS.",
-    "**Runs as uid 1000.** The nginx-based image works unprivileged on port 8000."
+    "**Client-side only.** Every operation runs in the browser; input, recipes and output are never uploaded.",
+    "**No telemetry.** The packaged build contains no analytics, no account and no update check.",
+    "**Runs as uid 1000.** The nginx-based image serves static files on port 8000 unprivileged.",
+    "**Image pinned to v11.6.0** (multi-arch amd64+arm64), upgraded for the nginx/dependency security fixes."
   ],
   "limitations": [
     "- Pure client-side tool: no server-side history or sharing between devices.",
+    "- HTTP request, DNS over HTTPS and Show on map need internet access and fail offline (by design).",
     "- The UI is plain HTTP; use a TLS reverse proxy for remote access.",
     "- Very large inputs are limited by browser memory."
   ],

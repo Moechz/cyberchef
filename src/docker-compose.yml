@@ -1,8 +1,12 @@
 # ===========================================================================
 # CyberChef for TerraMaster TOS 7 (Docker application)
 # ===========================================================================
-# Upstream image : mpepping/cyberchef:v10.19.4 (Docker Hub, used unmodified)
+# Upstream image : mpepping/cyberchef:v11.6.0 (Docker Hub, used unmodified)
 #                  -> https://github.com/gchq/CyberChef
+#                  Multi-arch OCI index (linux/amd64 + linux/arm64), built from
+#                  upstream CyberChef v11.6.0 (nginx-unprivileged static server).
+#                  v11.6.0 moves the base image and the bundled JS dependencies
+#                  to their current security-fixed versions (review item T1).
 #
 # Ports   : host 8052 -> container 8000. The host port is in the
 #           TOS-recommended 8000-19999 range and is not one of the reserved
@@ -26,7 +30,7 @@
 
 services:
   cyberchefdocker:
-    image: mpepping/cyberchef:v10.19.4
+    image: mpepping/cyberchef:v11.6.0
     container_name: cyberchefdocker
     restart: unless-stopped
     user: "1000:1000"
